@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MWST</title>
+  </head>
+  <body>
+    <h1>Mehrwertsteuer-Rechner</h1>
+    <div>
+      <h2>Was soll berechnet werden</h2>
+      <input
+        type="radio"
+        name="berechnungstyp"
+        value="nettozubrutto"
+        id="nettozubrutto"
+        checked
+      />
+      <label for="nettozubrutto">Netto zu Brutto</label>
+      <input
+        type="radio"
+        name="berechnungstyp"
+        value="bruttozunetto"
+        id="bruttozunetto"
+      />
+      <label for="bruttozunetto">Brutto zu Netto</label>
+    </div>
+    <div>
+      <h2>MWST</h2>
+      <select name="mwst" id="mwst">
+        <option value="0.19">19%</option>
+        <option value="0.07">7%</option>
+      </select>
+    </div>
+
+    <div>
+      <h2>Nettobetrag (Preis ohne MWST) in Euro*</h2>
+      <label for="betrag" id="betrag-label">Nettobetrag: </label>
+      <input type="number" id="betrag" />
+      <input type="submit" value="Berechnen" id="berechnen" />
+    </div>
+
+    <div class="felder">
+      <h3>Mehrwertsteuerbetrag</h3>
+      <p id="outputMwSt">€</p>
+    </div>
+
+    <div class="felder">
+      <h3 id="outputText">Bruttobetrag (Endpreis)</h3>
+      <p id="outputBetrag">€</p>
+    </div>
+
+    <script src="./assets/mains.js"></script>
+  </body>
+</html>
